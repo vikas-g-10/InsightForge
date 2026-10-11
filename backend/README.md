@@ -36,7 +36,7 @@ uvicorn main:app --reload --env-file ../.env
 | Variable | Default | Notes |
 |---|---|---|
 | `APP_MODE` | `lite` | `lite` or `full` (case-insensitive). Anything else fails startup with a clear error. `full` only changes the reported mode for now. |
-| `MAX_UPLOAD_BYTES` | `5242880` (5 MB) | Positive integer. Larger uploads get `413 file_too_large`. |
+| `MAX_UPLOAD_BYTES` | `52428800` (50 MB) | Positive integer. Larger uploads get `413 file_too_large`. |
 | `MAX_ROWS` | `2000` | Positive integer. Data rows above this get `422 too_many_rows`. |
 | `ALLOWED_ORIGINS` | `http://localhost:5173,http://127.0.0.1:5173` | Comma-separated explicit origins. `*` and malformed values fail startup. Credentials are disabled. |
 

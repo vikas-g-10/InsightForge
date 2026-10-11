@@ -38,7 +38,7 @@ def test_settings_do_not_require_supabase_or_api_keys():
 
 def test_ingest_limit_defaults():
     s = Settings.from_env({})
-    assert (s.max_rows, s.max_upload_bytes) == (2000, 5 * 1024 * 1024)
+    assert (s.max_rows, s.max_upload_bytes) == (2000, 50 * 1024 * 1024)
 
 
 def test_ingest_limits_from_env():

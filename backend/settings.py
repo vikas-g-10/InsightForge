@@ -12,7 +12,7 @@ from dotenv import load_dotenv
 
 VALID_MODES = ("lite", "full")
 DEFAULT_MODE = "lite"
-DEFAULT_MAX_UPLOAD_BYTES = 5 * 1024 * 1024
+DEFAULT_MAX_UPLOAD_BYTES = 50 * 1024 * 1024
 DEFAULT_MAX_ROWS = 2000
 DEFAULT_ALLOWED_ORIGINS = (
     "http://localhost:5173",

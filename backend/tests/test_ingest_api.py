@@ -160,3 +160,36 @@ def test_health_unchanged(client):
         "mode": "lite",
         "db_connected": False,
     }
+
+
+def test_valid_csv_below_5mb_accepted(client):
+    """Verify that a valid CSV below the previous 5 MB limit is accepted."""
+    row = "Great battery life and clear screen,5,2024-01-01\n"
+    data = ("review_text,rating,date\n" + row * 100).encode("utf-8")
+    assert len(data) < 5 * 1024 * 1024
+    r = upload(client, "small.csv", data)
+    assert r.status_code == 200
+    assert r.json()["usable_rows"] == 100
+    assert r.json()["file_type"] == "csv"
+
+
+def test_valid_csv_above_5mb_and_up_to_50mb_accepted(client):
+    """Verify that a valid CSV between 5 MB and 50 MB is accepted."""
+    # 1,000 rows of ~6 KB each = ~6 MB (within max_rows=2000 and <= 50 MB)
+    row_text = "Detailed feedback note: " + ("helpful device feature " * 280) + ",5,2024-01-01\n"
+    data = ("review_text,rating,date\n" + row_text * 1000).encode("utf-8")
+    assert 5 * 1024 * 1024 < len(data) <= 50 * 1024 * 1024
+    r = upload(client, "large_valid.csv", data)
+    assert r.status_code == 200
+    assert r.json()["usable_rows"] == 1000
+    assert r.json()["file_type"] == "csv"
+
+
+def test_csv_exceeding_50mb_rejected_with_413(client):
+    """Verify that a CSV exceeding the 50 MB limit is rejected with 413 file_too_large."""
+    oversized = b"review_text,rating\n" + b"x" * (50 * 1024 * 1024 + 1024)
+    r = upload(client, "oversized.csv", oversized)
+    assert r.status_code == 413
+    assert error_of(r)["code"] == "file_too_large"
+    assert "50.0 MB" in error_of(r)["message"]
+

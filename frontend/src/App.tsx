@@ -1090,7 +1090,7 @@ function AnalyzePage({
                 Drag and drop your CSV or XLSX file here, or{' '}
                 <span className="text-indigo-500">browse</span>
               </div>
-              <div className={`mt-1.5 text-xs ${muted}`}>CSV or XLSX · Max 5MB / 2,000 rows</div>
+              <div className={`mt-1.5 text-xs ${muted}`}>CSV or XLSX · Max 50MB / 2,000 rows</div>
               <input
                 type="file"
                 accept=".csv,.xlsx"
