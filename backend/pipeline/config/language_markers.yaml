@@ -1,0 +1,24 @@
+# PROPOSED DEFAULTS (the PRD was not available when this was written).
+# Marker words for the heuristic language tagger. Lowercase. Quote words that
+# YAML would read as booleans (no, on, yes). The two lists must not overlap.
+# Hinglish markers are romanized Hindi words that are not common English words.
+hinglish_markers: [
+  hai, hain, nahi, nahin, nhi, bahut, bohot, bohat, bahot, bhot, accha, acha, achha, achchha,
+  kharab, bekar, bakwas, ghatiya, badhiya, badiya, mast, zabardast, jabardast, aur, lekin,
+  magar, kya, kyun, kyu, yeh, ye, woh, wo, mera, meri, mere, apna, apni, hota, hoti, hua, hui,
+  gaya, gayi, gaye, raha, rahi, rahe, thi, karo, karna, kiya, kia, liya, diya, ka, ki, ke, ko,
+  se, mein, bilkul, sirf, bhi, toh, tum, aap, paisa, paise, wapas, jaldi, abhi, kabhi, sab,
+  koi, kuch, thoda, zyada, jyada, mehnga, mahanga, dheere, bhai, yaar, sahi, galat, madad,
+  wala, wali, wale, lagta, lagti, ek, kaam, chalta, chalti, milta, mila, nahi, samajh,
+]
+english_words: [
+  the, a, an, is, are, was, were, be, been, it, its, this, that, these, those, and, or, but,
+  not, "no", with, for, of, in, "on", at, to, from, by, as, i, my, me, you, your, we, they,
+  he, she, very, so, too, just, have, has, had, do, does, did, can, will, would, should,
+  after, before, when, while, every, again, always, never, only, also, even, if, than, then,
+  app, good, bad, great, nice, love, hate, slow, fast, price, expensive, crash, crashes,
+  bug, bugs, support, service, delivery, order, update, worst, best, awesome, terrible,
+  easy, use, using, work, works, working, money, product, quality, design, battery,
+  customer, issue, issues, problem, problems, time, day, week, thanks, thank, please,
+  like, really, much, more, most, less, all, get, got, make, made, need, want, try,
+]

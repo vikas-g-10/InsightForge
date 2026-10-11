@@ -1,0 +1,169 @@
+code: tenglish
+badge: Tenglish
+language: "Telugu (Romanized)"
+tier: 2
+status: "Experimental language pack per PRD Section 7.3a"
+function_words:
+  - chala
+  - chaala
+  - bagundi
+  - baagundi
+  - ledu
+  - ledhu
+  - kadu
+  - kaadhu
+  - undhi
+  - undi
+  - ikkada
+  - akkada
+  - idi
+  - adi
+  - kavali
+  - vodhu
+  - vaddu
+  - avunu
+  - telugu
+  - ivvandi
+  - ela
+  - enduku
+  - malli
+  - baga
+  - baaga
+  - manchi
+  - daridram
+spelling_variants:
+  chaala: chala
+  baagundi: bagundi
+  ledhu: ledu
+  kaadhu: kadu
+  undi: undhi
+  baaga: baga
+negators_before:
+  - ledu
+  - ledhu
+  - kadu
+  - kaadhu
+negators_after:
+  - ledu
+  - ledhu
+  - kadu
+  - kaadhu
+  - vaddu
+  - vodhu
+  - raaledu
+aspect_seeds:
+  camera: [camera, photo]
+  battery: [battery, charge]
+  sound: [shabdam, paata, vinipinchadam]
+lexicon:
+  positive:
+    bagundi: 2
+    baga: 2
+    manchi: 2
+    super: 2
+    adbhutam: 2
+    nachindi: 2
+    thopu: 2
+    keka: 2
+  negative:
+    waste: -2
+    daridram: -2
+    chetta: -2
+    baledu: -2
+    rod: -2
+    bokka: -2
+    nachaledu: -2
+    pani cheyatam ledu: -2
+    mosam: -2
+    ekkuva: -1
+test_clauses:
+  - text: "camera chala bagundi"
+    label: positive
+    aspect: camera
+  - text: "battery baledu"
+    label: negative
+    aspect: battery
+  - text: "phone chala manchi quality"
+    label: positive
+    aspect: quality
+  - text: "delivery waste"
+    label: negative
+    aspect: delivery
+  - text: "display keka undhi"
+    label: positive
+    aspect: null
+  - text: "sound bagundi"
+    label: positive
+    aspect: sound
+  - text: "battery baga ledu"
+    label: negative
+    aspect: battery
+  - text: "camera manchi ga ledu"
+    label: negative
+    aspect: camera
+  - text: "service kavali"
+    label: neutral
+    aspect: support
+  - text: "chala daridram product"
+    label: negative
+    aspect: null
+  - text: "super camera undhi"
+    label: positive
+    aspect: camera
+  - text: "screen baledu"
+    label: negative
+    aspect: null
+  - text: "chala fast delivery"
+    label: positive
+    aspect: delivery
+  - text: "rate chala ekkuva"
+    label: negative
+    aspect: price
+  - text: "battery backup thopu"
+    label: positive
+    aspect: battery
+  - text: "sound nachaledu"
+    label: negative
+    aspect: sound
+  - text: "quality adbhutam"
+    label: positive
+    aspect: quality
+  - text: "earphones chetta product"
+    label: negative
+    aspect: null
+  - text: "photo clarity chala bagundi"
+    label: positive
+    aspect: camera
+  - text: "charger pani cheyatam ledu"
+    label: negative
+    aspect: battery
+  - text: "box damaged ga vachindi"
+    label: negative
+    aspect: packaging
+  - text: "speaker baledu"
+    label: negative
+    aspect: sound
+  - text: "speaker chala manchi sound"
+    label: positive
+    aspect: sound
+  - text: "speed chala slow"
+    label: negative
+    aspect: performance
+  - text: "design bagundi"
+    label: positive
+    aspect: design
+  - text: "price ok undhi"
+    label: neutral
+    aspect: price
+  - text: "chala mosam delivery"
+    label: negative
+    aspect: delivery
+  - text: "super quality phone"
+    label: positive
+    aspect: quality
+  - text: "phone heat ekkutundi"
+    label: negative
+    aspect: null
+  - text: "price chala value"
+    label: positive
+    aspect: price

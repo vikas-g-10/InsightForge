@@ -1,0 +1,138 @@
+# Safety terms reconciled with PRD v4 Section 7.2.
+# Tiers: critical | high | medium.
+# Critical: fire, explosion, sparks, shock, burn, smoke.
+# High: allergic reaction, rash, choking, bleeding, injury, fainting.
+# Medium: overheating, swelling battery, leakage.
+# Suggested action: "escalate to QA and Compliance within 24 hours".
+# A trailing * allows any letter suffix (min 4 chars before *).
+
+categories:
+  physical_safety:
+    - tier: critical
+      suggested_action: "escalate to QA and Compliance within 24 hours"
+      terms:
+        # Fire
+        - "caught fire"
+        - "catch fire"
+        - "caught on fire"
+        - "on fire"
+        - "phone caught fire"
+        - "burst into flames"
+        - "fire hazard"
+        - "aag lag*"
+        - "aag lagi"
+        - "आग लग*"
+        - "आग लगी"
+        # Explosion
+        - explod*
+        - explosion
+        - blast*
+        - blast
+        # Sparks
+        - spark*
+        - sparks
+        - sparking
+        - "sparks flying"
+        # Shock
+        - "electric shock"
+        - electrocut*
+        - "short circuit"
+        - "current laga"
+        - "करंट लगा"
+        # Burn
+        - "burned my"
+        - "burnt my"
+        - "burns my"
+        - "chemical burn"
+        - "severe burn"
+        - burn*
+        - "jal gaya"
+        - "जल गया"
+        # Smoke
+        - smoke
+        - smoking
+        - "burning smell"
+        - dhuan
+        - धुआं
+        - धुंआ
+    - tier: high
+      suggested_action: "escalate to QA and Compliance within 24 hours"
+      terms:
+        # Allergic reaction
+        - "allergic reaction"
+        - allergy
+        - allergic
+        - एलर्जी
+        # Rash
+        - rash*
+        - "skin rash"
+        # Choking
+        - choking
+        - choke*
+        - "choking hazard"
+        # Bleeding
+        - bleeding
+        - blood
+        - khoon
+        - खून
+        # Injury
+        - injur*
+        - hospital*
+        - poisoned
+        - "food poisoning"
+        - chot
+        - चोट
+        # Fainting
+        - faint*
+        - unconscious
+        - behoshi
+        - बेहोश*
+    - tier: medium
+      suggested_action: "escalate to QA and Compliance within 24 hours"
+      terms:
+        # Overheating
+        - overheat*
+        - "over heating"
+        - "garam ho gaya"
+        - "गरम हो गया"
+        - "heats up excessively"
+        - "too hot to hold"
+        - "heating issue*"
+        # Swelling battery
+        - "swelling battery"
+        - "swollen battery"
+        - "battery swell*"
+        - "battery phool*"
+        # Leakage
+        - leakage
+        - "battery leak*"
+        - "acid leak*"
+        - "leaking battery"
+  fraud_financial:
+    - tier: high
+      suggested_action: "escalate to QA and Compliance within 24 hours"
+      terms: [scam, scammer*, fraud*, "unauthorized transaction*", "unauthorised transaction*",
+        "stole my money", "money stolen", dhokha, dhokhebaaz, thagi, धोखा, ठगी, फ्रॉड]
+    - tier: medium
+      suggested_action: "escalate to QA and Compliance within 24 hours"
+      terms: [cheated, "ripped off", "double charged", "charged twice", "paise kat gaye", "paisa kat gaya"]
+  privacy_security:
+    - tier: high
+      suggested_action: "escalate to QA and Compliance within 24 hours"
+      terms: [hacked, "data leak", "data breach", "leaked my", "unauthorized access",
+        "unauthorised access", "account compromised", "stole my data", phishing, "sold my data", हैक]
+    - tier: medium
+      suggested_action: "escalate to QA and Compliance within 24 hours"
+      terms: [privacy, "personal data", "spam calls", "hack ho"]
+  harassment_abuse:
+    - tier: high
+      suggested_action: "escalate to QA and Compliance within 24 hours"
+      terms: [molest*, assault*, stalk*, threaten*, dhamki]
+    - tier: medium
+      suggested_action: "escalate to QA and Compliance within 24 hours"
+      terms: [harass*, abus*, inappropriate, misbehav*, badtameezi, gaali]
+  self_harm:
+    - tier: high
+      suggested_action: "escalate to QA and Compliance within 24 hours"
+      terms: [suicide, suicidal, "kill myself", "end my life", "self harm", "self-harm",
+        "want to die", aatmahatya, आत्महत्या]

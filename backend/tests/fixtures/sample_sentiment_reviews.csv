@@ -1,0 +1,31 @@
+text,rating,sentiment,label_id,review_id
+Broke after only two uses. The plastic handle snapped completely.,1.0,negative,0,sample_rev_001
+"Terrible quality and very noisy motor. Defective unit, returning immediately.",1.0,negative,0,sample_rev_002
+Battery drains in less than two hours. Completely unusable for daily work.,1.0,negative,0,sample_rev_003
+Stopped working within a week. Customer support refused to issue a replacement.,1.0,negative,0,sample_rev_004
+Poor build quality and very cheap materials. Very disappointed with this purchase.,2.0,negative,0,sample_rev_005
+Does not fit properly and constantly leaks water. Waste of money.,2.0,negative,0,sample_rev_006
+Very loud vibrations and overheats rapidly. Would not recommend to anyone.,1.0,negative,0,sample_rev_007
+Flimsy construction and parts arrived missing from the box.,2.0,negative,0,sample_rev_008
+The motor burned out during normal operation. Hazardous smell of smoke.,1.0,negative,0,sample_rev_009
+Software crashes constantly and Bluetooth connection drops every few minutes.,2.0,negative,0,sample_rev_010
+"It works as expected, nothing extraordinary but gets the basic job done.",3.0,neutral,1,sample_rev_011
+"Average product. Build is decent for the price, but could be sturdier.",3.0,neutral,1,sample_rev_012
+"Acceptable performance. Takes a while to warm up, but operates fine once running.",3.0,neutral,1,sample_rev_013
+"Mediocre experience. It is okay for light household use, but not for heavy tasks.",3.0,neutral,1,sample_rev_014
+Standard replacement filter. Neither impressed nor unhappy with the outcome.,3.0,neutral,1,sample_rev_015
+"The product matches the description. Quality is okay, delivery was on time.",3.0,neutral,1,sample_rev_016
+Fair value. Sound is average and cord length is a bit short.,3.0,neutral,1,sample_rev_017
+Works moderately well. A bit bulky on the counter but functional.,3.0,neutral,1,sample_rev_018
+Not great but not terrible either. Does what it claims at an entry level price.,3.0,neutral,1,sample_rev_019
+Basic functionality is fine. Instruction manual was somewhat unclear.,3.0,neutral,1,sample_rev_020
+Excellent quality and outstanding performance! Very satisfied with this machine.,5.0,positive,2,sample_rev_021
+"Best purchase I made this year. Whisper quiet, powerful, and easy to clean.",5.0,positive,2,sample_rev_022
+Extremely well constructed and durable. Worth every penny spent.,5.0,positive,2,sample_rev_023
+Super fast shipping and works flawlessly. Exceeded my high expectations.,5.0,positive,2,sample_rev_024
+Incredible battery life and seamless setup. Highly recommend to everyone.,5.0,positive,2,sample_rev_025
+"Sturdy metal construction, intuitive buttons, and reliable performance every day.",4.0,positive,2,sample_rev_026
+Very pleased with the build quality and finish. Looks fantastic in my kitchen.,5.0,positive,2,sample_rev_027
+"Works like a charm. Compact, powerful, and very well designed.",5.0,positive,2,sample_rev_028
+Great value for money. Operates smoothly without any hiccups or noise.,4.0,positive,2,sample_rev_029
+Top notch engineering and crystal clear display. A five star product.,5.0,positive,2,sample_rev_030

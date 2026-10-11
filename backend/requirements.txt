@@ -1,0 +1,22 @@
+# InsightForge backend: Lite mode runtime dependencies.
+# No PyTorch, transformers, or model downloads.
+fastapi>=0.115,<1.0
+uvicorn>=0.30,<1.0
+# Only needed for `uvicorn --env-file`; keeps local .env usage simple.
+python-dotenv>=1.0,<2.0
+# Multipart/form-data uploads (required by FastAPI File/Form).
+python-multipart>=0.0.9,<1.0
+# DataFrame output of ingestion; reused by later analysis milestones.
+pandas>=2.2,<4.0
+# XLSX reading (read-only mode, cached values only).
+openpyxl>=3.1,<4.0
+# Makes openpyxl parse untrusted XML safely (entity-expansion protection).
+defusedxml>=0.7,<1.0
+# YAML config for the NLP pipeline (aspects, lexicon, safety terms).
+PyYAML>=6.0,<7.0
+# Supabase JWT token verification (JWKS RS256/ES256 and HS256)
+pyjwt[crypto]>=2.8.0,<3.0
+requests>=2.31.0,<3.0
+# Machine Learning model training & inference pipeline
+scikit-learn>=1.4.0,<2.0
+joblib>=1.3.0,<2.0

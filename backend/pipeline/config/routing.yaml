@@ -1,0 +1,56 @@
+# PRD v4 Section 7.6 Aspect Routing Map
+# Battery, Performance, Quality, Design, Camera, Sound -> Product/Engineering
+# Delivery, Packaging -> Logistics
+# Support -> Customer Support
+# Price -> Pricing/Marketing
+# Safety -> QA/Compliance (priority P0)
+
+routing:
+  battery:
+    team: "Product/Engineering"
+    priority: "P1"
+  performance:
+    team: "Product/Engineering"
+    priority: "P1"
+  quality:
+    team: "Product/Engineering"
+    priority: "P1"
+  design:
+    team: "Product/Engineering"
+    priority: "P2"
+  camera:
+    team: "Product/Engineering"
+    priority: "P1"
+  sound:
+    team: "Product/Engineering"
+    priority: "P1"
+  stability:
+    team: "Product/Engineering"
+    priority: "P1"
+  ui_ux:
+    team: "Product/Engineering"
+    priority: "P2"
+  delivery:
+    team: "Logistics"
+    priority: "P1"
+  packaging:
+    team: "Logistics"
+    priority: "P2"
+  support:
+    team: "Customer Support"
+    priority: "P1"
+  customer_support:
+    team: "Customer Support"
+    priority: "P1"
+  price:
+    team: "Pricing/Marketing"
+    priority: "P2"
+  pricing:
+    team: "Pricing/Marketing"
+    priority: "P2"
+  payments:
+    team: "Pricing/Marketing"
+    priority: "P1"
+  safety:
+    team: "QA/Compliance"
+    priority: "P0"

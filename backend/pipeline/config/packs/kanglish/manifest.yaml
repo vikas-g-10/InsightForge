@@ -1,0 +1,155 @@
+code: kanglish
+badge: Kanglish
+language: "Kannada (Romanized)"
+tier: 2
+status: "Experimental language pack per PRD Section 7.3a"
+function_words:
+  - tumba
+  - thumba
+  - chennagide
+  - chennagidhe
+  - chennagi
+  - agide
+  - ide
+  - illi
+  - alli
+  - idu
+  - adu
+  - illa
+  - beku
+  - beda
+  - houdu
+  - kannada
+  - kodu
+  - togo
+  - hege
+  - yake
+  - matte
+  - sakath
+  - bahala
+spelling_variants:
+  thumba: tumba
+  chennagidhe: chennagide
+  sakat: sakath
+negators_before:
+  - illa
+  - alla
+negators_after:
+  - illa
+  - alla
+  - beda
+  - baralla
+aspect_seeds:
+  camera: [camera, photo]
+  battery: [battery, charge]
+  sound: [dhwani, shabda]
+lexicon:
+  positive:
+    chennagide: 2
+    chennagi: 2
+    olleyadu: 2
+    uttamavada: 2
+    chanda: 2
+    ishta: 1
+    super: 2
+    sakath: 2
+  negative:
+    waste: -2
+    bekilla: -2
+    chette: -2
+    ketta: -2
+    sariyilla: -2
+    dabba: -2
+    mosam: -3
+    danda: -2
+test_clauses:
+  - text: "camera tumba chennagide"
+    label: positive
+    aspect: camera
+  - text: "battery sariyilla"
+    label: negative
+    aspect: battery
+  - text: "phone tumba olleyadu"
+    label: positive
+    aspect: null
+  - text: "delivery waste"
+    label: negative
+    aspect: delivery
+  - text: "display chanda ide"
+    label: positive
+    aspect: null
+  - text: "sound sakath agide"
+    label: positive
+    aspect: sound
+  - text: "battery chennagi illa"
+    label: negative
+    aspect: battery
+  - text: "camera olleyadu alla"
+    label: negative
+    aspect: camera
+  - text: "service beku"
+    label: neutral
+    aspect: support
+  - text: "tumba danda product"
+    label: negative
+    aspect: null
+  - text: "sound chennagide"
+    label: positive
+    aspect: sound
+  - text: "packaging dabba ketta ide"
+    label: negative
+    aspect: packaging
+  - text: "super camera ide"
+    label: positive
+    aspect: camera
+  - text: "screen sariyilla"
+    label: negative
+    aspect: null
+  - text: "tumba fast delivery"
+    label: positive
+    aspect: delivery
+  - text: "rate tumba jaasti"
+    label: negative
+    aspect: price
+  - text: "battery backup sakath"
+    label: positive
+    aspect: battery
+  - text: "sound ishta aagilla"
+    label: negative
+    aspect: sound
+  - text: "quality uttamavada"
+    label: positive
+    aspect: quality
+  - text: "earphones waste product"
+    label: negative
+    aspect: null
+  - text: "photo clarity tumba chennagide"
+    label: positive
+    aspect: camera
+  - text: "charger work aagilla"
+    label: negative
+    aspect: battery
+  - text: "cover beku"
+    label: neutral
+    aspect: null
+  - text: "mic sariyilla"
+    label: negative
+    aspect: sound
+  - text: "speaker tumba olleyadu"
+    label: positive
+    aspect: sound
+  - text: "speed bahala slow"
+    label: negative
+    aspect: performance
+  - text: "design chanda ide"
+    label: positive
+    aspect: design
+  - text: "price ok ide"
+    label: neutral
+    aspect: price
+  - text: "tumba mosam delivery"
+    label: negative
+    aspect: delivery
+  - text: "super quality phone"
+    label: positive
+    aspect: quality

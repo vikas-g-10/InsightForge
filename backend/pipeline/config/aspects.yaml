@@ -1,0 +1,100 @@
+# Aspect taxonomy reconciled with PRD v4 Sections 3 (F2), 7.3, 7.3a, 7.5, 7.6, 9.
+#
+# Routing map (Section 7.6):
+#   - Battery, Performance, Quality, Design, Camera, Sound -> Product/Engineering
+#   - Delivery, Packaging -> Logistics
+#   - Support -> Customer Support
+#   - Price -> Pricing/Marketing
+#   - Safety -> QA/Compliance (priority P0)
+#
+# Rules:
+#   - Matching is case-insensitive and respects word boundaries.
+#   - Trailing * allows letter suffixes (crash* -> crashes, crashing; min 4 chars before *).
+#   - strong: one match is enough evidence.
+#   - weak: ambiguous words; needs min_weak_terms distinct weak terms in same clause.
+
+min_weak_terms: 2
+aspects:
+  camera:
+    label: Camera
+    strong: [camera*, photo*, picture*, lens, lenses, selfie*, video*, megapixel*, sensor*]
+    weak: [shot*, shots, clarity, resolution, zoom, focus]
+
+  battery:
+    label: Battery and charging
+    strong: [battery, drain, draining, drains, "battery drain", "battery life", "battery backup",
+      "battery backup nahi", "battery khatam", "battery backup bekar", charger, charging, charge]
+    weak: [power, backup, mah, "screen on time", sot]
+
+  performance:
+    label: Performance
+    strong: [slow*, lag, lags, laggy, lagging, hang, hangs, hanging, sluggish, "loading time",
+      "takes forever", "takes too long", "long time to load", "response time", dheere, धीमा, धीमी]
+    weak: [loading, speed, fast, quick, delay*, late, processor, ram]
+
+  quality:
+    label: Product quality
+    strong: [quality, defective, defect*, counterfeit, fake, durable, durability, flimsy,
+      "cheaply made", "kharab hona", "toot gaya", "toot gayi", nakli, "build quality", "poor build",
+      "cheap material", "damaged product"]
+    weak: [material, size, fit, original, broken, damaged]
+
+  design:
+    label: Design and look
+    strong: [design, stylish, aesthetic*, appearance, compact, lightweight,
+      bulky, ergonomic*, "look and feel", "form factor"]
+    weak: [look, looks, size, shape, color, weight, feel]
+
+  sound:
+    label: Sound and audio
+    strong: [sound, audio, speaker*, mic, microphone*, volume, bass, treble, voice,
+      awaaz, aawaz, awaz, आवाज, "sound quality", "audio quality", "sound issue*"]
+    weak: [loud, clear, hear, listening, call*, calls]
+
+  delivery:
+    label: Delivery and shipping
+    strong: [deliver*, delivery, shipping, shipment, courier, "arrived late", "late delivery",
+      "order late", tracking, "delivery boy", "fast delivery", "quick delivery", "late deliver*"]
+    weak: [late, delay*, order*, "on time", dispatch*]
+
+  packaging:
+    label: Packaging
+    strong: [packag*, parcel, box, boxes, dabba, "dabba kharab", "packed well", "damaged box",
+      "seal broken", "open box", unboxing, डिब्बा]
+    weak: [packed, packing, seal, cover]
+
+  customer_support:
+    label: Customer support
+    strong: ["customer support", "customer care", "customer service", helpline, "support team",
+      "support staff", "service center", "service centre", "no response", "no reply",
+      "never replied", "didn't respond", agent*, complaint*, "reply nahi", "jawab nahi",
+      "कस्टमर केयर", "ग्राहक सेवा"]
+    weak: [support, service, response, reply, replied, staff, contact*, executive, refund*]
+
+  pricing:
+    label: Pricing and value
+    strong: [price*, pricing, expensive, overpriced, cost*, subscription, "waste of money",
+      "worth the money", "not worth", "value for money", "paisa vasool", "hidden charge*",
+      "free trial", mehnga, mahanga, महंगा, दाम, कीमत, daam, kimat]
+    weak: [money, paid, pay, cheap, free, discount*, offer*, charge*, fees, fee]
+
+  stability:
+    label: Stability and bugs
+    strong: [crash*, freez*, "force close", "keeps closing", "not working", "stopped working",
+      "doesn't work", "does not work", "not opening", "won't open", bug, bugs, buggy, glitch*,
+      error*, "band ho jata", "band ho jaata", "chal nahi raha", "khul nahi raha",
+      क्रैश, "काम नहीं कर", "खुल नहीं रहा"]
+    weak: [issue*, problem*, fail*, broken, update]
+
+  ui_ux:
+    label: Interface and usability
+    strong: [ui, ux, interface, layout, navigation, "user friendly", "user-friendly", "easy to use",
+      "hard to use", "difficult to use", confusing, cluttered, "dark mode"]
+    weak: [easy, simple, intuitive, button*, screen*, menu*]
+
+  payments:
+    label: Payments and billing
+    strong: [payment*, "pay later", upi, checkout, transaction*, "credit card", "debit card",
+      "net banking", netbanking, wallet, "money deducted", "amount deducted", "paise kat",
+      "paisa kat", "double charged", "charged twice", refund*]
+    weak: [card, bank, paid, deducted, failed]

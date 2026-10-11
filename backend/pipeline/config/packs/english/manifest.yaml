@@ -1,0 +1,48 @@
+code: en
+badge: English
+language: "English"
+tier: 1
+status: "Validated base language"
+function_words:
+  - the
+  - this
+  - that
+  - with
+  - from
+  - have
+  - will
+  - would
+  - should
+  - because
+  - about
+  - very
+spelling_variants: {}
+negators_before:
+  - not
+  - "no"
+  - never
+  - neither
+  - hardly
+  - barely
+negators_after: []
+aspect_seeds:
+  battery: [battery, charge, charging, power]
+  camera: [camera, photo, lens, picture]
+  sound: [sound, audio, speaker, volume, mic]
+  packaging: [packaging, box, package, packing]
+  delivery: [delivery, courier, shipping, arrive]
+lexicon:
+  positive:
+    great: 2
+    good: 1
+    excellent: 3
+    love: 2
+    awesome: 3
+    amazing: 3
+  negative:
+    terrible: -3
+    bad: -1
+    awful: -3
+    horrible: -3
+    waste: -2
+    worst: -3

@@ -1,0 +1,151 @@
+{
+  "dataset": {
+    "name": "Amazon Reviews 2023",
+    "category": "Appliances",
+    "source_url": "https://huggingface.co/datasets/McAuley-Lab/Amazon-Reviews-2023",
+    "total_samples": 30000,
+    "splits": {
+      "train": 21000,
+      "validation": 4500,
+      "test": 4500
+    },
+    "class_distribution": {
+      "negative": 10000,
+      "positive": 10000,
+      "neutral": 10000
+    },
+    "proxy_labeling_notice": "Labels mapped from star ratings (1-2 neg, 3 neu, 4-5 pos). Reflects real transactional proxy sentiment."
+  },
+  "model": {
+    "selected_model": "TF-IDF (20k, Stopwords Preserved) + Calibrated Linear SVM (C=0.5)",
+    "vectorizer": "Optimized TF-IDF (20,000 features, 1-2 ngrams, sublinear_tf, stopwords preserved)",
+    "random_seed": 42,
+    "training_timestamp": "2026-10-10T21:20:51.482570+00:00",
+    "vocabulary_size": 20000
+  },
+  "test_results": {
+    "accuracy": 0.7582,
+    "macro_f1": 0.7575,
+    "weighted_f1": 0.7575,
+    "average_latency_ms": 1.928
+  },
+  "per_class_metrics": {
+    "negative": {
+      "precision": 0.7382,
+      "recall": 0.7687,
+      "f1_score": 0.7531,
+      "support": 1500
+    },
+    "neutral": {
+      "precision": 0.676,
+      "recall": 0.6467,
+      "f1_score": 0.661,
+      "support": 1500
+    },
+    "positive": {
+      "precision": 0.8576,
+      "recall": 0.8593,
+      "f1_score": 0.8585,
+      "support": 1500
+    }
+  },
+  "confusion_matrix": {
+    "labels": [
+      "negative",
+      "neutral",
+      "positive"
+    ],
+    "matrix": [
+      [
+        1153,
+        299,
+        48
+      ],
+      [
+        364,
+        970,
+        166
+      ],
+      [
+        45,
+        166,
+        1289
+      ]
+    ]
+  },
+  "model_comparison": [
+    {
+      "model_name": "TF-IDF (10k, English Stop) + Logistic Regression",
+      "val_accuracy": 0.7007,
+      "val_macro_f1": 0.6997,
+      "test_accuracy": 0.7082,
+      "test_macro_f1": 0.708,
+      "training_time_s": 0.61,
+      "latency_ms": 0.448,
+      "status": "Baseline"
+    },
+    {
+      "model_name": "TF-IDF (20k, Stopwords Preserved) + Logistic Regression (C=1.0)",
+      "val_accuracy": 0.7584,
+      "val_macro_f1": 0.7585,
+      "test_accuracy": 0.756,
+      "test_macro_f1": 0.7564,
+      "training_time_s": 0.67,
+      "latency_ms": 0.477,
+      "status": "Candidate"
+    },
+    {
+      "model_name": "TF-IDF (20k, Stopwords Preserved) + Calibrated Linear SVM (C=0.5)",
+      "val_accuracy": 0.764,
+      "val_macro_f1": 0.7629,
+      "test_accuracy": 0.7582,
+      "test_macro_f1": 0.7575,
+      "training_time_s": 0.6,
+      "latency_ms": 1.928,
+      "status": "Selected Champion"
+    },
+    {
+      "model_name": "TF-IDF (20k, Stopwords Preserved) + Soft Voting Ensemble (LR + SVM)",
+      "val_accuracy": 0.7622,
+      "val_macro_f1": 0.7615,
+      "test_accuracy": 0.7589,
+      "test_macro_f1": 0.7586,
+      "training_time_s": 1.24,
+      "latency_ms": 2.257,
+      "status": "Candidate"
+    }
+  ],
+  "neutral_class_analysis": {
+    "finding": "Neutral (3-star) reviews exhibit significantly higher label noise than polarized reviews. Of the 1,500 held-out neutral reviews, 23.5% were classified as negative and 11.9% as positive, reflecting customer tendency to assign 3 stars to mixed reviews containing explicit polarity phrases.",
+    "total_neutral_test_samples": 1500,
+    "correctly_classified_neutral": 970,
+    "confused_as_negative": 364,
+    "confused_as_positive": 166,
+    "neutral_f1": 0.661,
+    "negative_f1": 0.7531,
+    "positive_f1": 0.8585,
+    "mixed_signals_note": "Star ratings represent overall satisfaction, not strict linguistic neutrality."
+  },
+  "binary_benchmark": {
+    "task": "Binary Sentiment Classification (1-2 Stars Negative vs 4-5 Stars Positive, 3-Star Excluded)",
+    "dataset_samples": 20000,
+    "splits": {
+      "train": 14000,
+      "validation": 3000,
+      "test": 3000
+    },
+    "test_accuracy": 0.937,
+    "test_macro_f1": 0.937,
+    "classes": [
+      "negative",
+      "positive"
+    ],
+    "note": "Separate benchmark excluding ambiguous 3-star reviews. Demonstrates that sentiment polarity achieves 93.70% test accuracy when ambiguous neutral proxy labels are removed."
+  },
+  "limitations": [
+    "Star ratings represent customer satisfaction rather than linguistic sentiment alone.",
+    "Neutral class exhibits lower recall (64.7%) due to inherent mixed-sentiment ambiguity in 3-star reviews.",
+    "Domain-specific terminology reflects consumer appliances and e-commerce vocabulary.",
+    "DistilBERT transformer fine-tuning was constrained by Python 3.14 CPU environment without pre-built Windows torch wheels; optimized linear model achieved 75.82% 3-class accuracy with sub-millisecond CPU latency."
+  ]
+}

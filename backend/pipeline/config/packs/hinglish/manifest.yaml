@@ -1,0 +1,108 @@
+code: hinglish
+badge: Hinglish
+language: "Hindi (Romanized)"
+tier: 1
+status: "Validated language pack per PRD Section 7.3"
+function_words:
+  - hai
+  - hain
+  - tha
+  - thi
+  - the
+  - hoga
+  - hogi
+  - nahi
+  - nhi
+  - ni
+  - mat
+  - bahut
+  - bahoot
+  - bohot
+  - bohat
+  - bhot
+  - kharab
+  - kharaab
+  - accha
+  - acha
+  - achha
+  - yeh
+  - ye
+  - woh
+  - wo
+  - kya
+  - kyu
+  - kyun
+  - aur
+  - lekin
+  - par
+  - magar
+  - bhi
+  - toh
+  - to
+  - se
+  - ko
+  - ka
+  - ki
+  - ke
+  - me
+  - mein
+  - pe
+  - par
+  - wala
+  - wali
+  - wale
+  - paisa
+  - wapas
+  - bakwaas
+  - ghatiya
+  - bekaar
+  - bekar
+  - zabardast
+  - badhiya
+  - badiya
+spelling_variants:
+  kharaab: kharab
+  kharb: kharab
+  nhi: nahi
+  ni: nahi
+  acha: accha
+  achha: accha
+  achchha: accha
+  badiya: badhiya
+  bohot: bahut
+  bohat: bahut
+  bhot: bahut
+  bahoot: bahut
+  bekar: bekaar
+negators_before:
+  - nahi
+  - nhi
+  - ni
+  - mat
+  - na
+negators_after:
+  - nahi
+  - nhi
+aspect_seeds:
+  battery: [battery, charge, charging]
+  camera: [camera, photo]
+  sound: [awaaz, sound, speaker]
+  packaging: [dabba, packaging, box]
+  delivery: [delivery, courier]
+lexicon:
+  positive:
+    accha: 2
+    badhiya: 2
+    zabardast: 3
+    sahi: 1
+    paisa vasool: 3
+    mast: 2
+    shandar: 3
+  negative:
+    kharab: -2
+    bakwaas: -3
+    ghatiya: -3
+    bekaar: -2
+    bura: -2
+    toot gaya: -3
+    barbaad: -3

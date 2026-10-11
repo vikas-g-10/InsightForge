@@ -1,0 +1,156 @@
+code: tanglish
+badge: Tanglish
+language: "Tamil (Romanized)"
+tier: 2
+status: "Experimental language pack per PRD Section 7.3a"
+function_words:
+  - romba
+  - rombha
+  - waste
+  - nalla
+  - nalladhu
+  - irukku
+  - iruku
+  - illai
+  - illa
+  - idhu
+  - adhu
+  - enga
+  - enna
+  - aana
+  - aanaa
+  - seri
+  - ippo
+  - appo
+  - kooda
+  - sema
+  - mokka
+  - mass
+spelling_variants:
+  rombha: romba
+  iruku: irukku
+  nala: nalla
+negators_before:
+  - illa
+  - illai
+negators_after:
+  - illa
+  - illai
+  - alla
+  - kidayadhu
+  - maattudhu
+aspect_seeds:
+  camera: [camera, padam]
+  battery: [battery, charge]
+  sound: [satham, paatu]
+lexicon:
+  positive:
+    nalla: 2
+    nalladhu: 2
+    arputham: 2
+    mass: 2
+    sema: 2
+    super: 2
+    pidichirukku: 2
+    seri: 1
+  negative:
+    waste: -2
+    mokka: -2
+    kevalam: -2
+    mosam: -2
+    thappu: -2
+    seriyilla: -2
+    velai seiyala: -2
+    veena: -2
+    adhigam: -1
+test_clauses:
+  - text: "phone romba waste"
+    label: negative
+    aspect: null
+  - text: "camera sema nalla irukku"
+    label: positive
+    aspect: camera
+  - text: "battery romba mokka"
+    label: negative
+    aspect: battery
+  - text: "delivery super fast"
+    label: positive
+    aspect: delivery
+  - text: "sound kevalam"
+    label: negative
+    aspect: sound
+  - text: "display mass ah irukku"
+    label: positive
+    aspect: null
+  - text: "camera nalla illa"
+    label: negative
+    aspect: camera
+  - text: "battery nalladhu illa"
+    label: negative
+    aspect: battery
+  - text: "packaging seri illa"
+    label: negative
+    aspect: packaging
+  - text: "service romba mosam"
+    label: negative
+    aspect: support
+  - text: "romba arputham phone"
+    label: positive
+    aspect: null
+  - text: "charger velai seiyala"
+    label: negative
+    aspect: battery
+  - text: "quality romba super"
+    label: positive
+    aspect: quality
+  - text: "price romba adhigam"
+    label: negative
+    aspect: price
+  - text: "sound pidichirukku"
+    label: positive
+    aspect: sound
+  - text: "battery waste ah irukku"
+    label: negative
+    aspect: battery
+  - text: "design sema mass"
+    label: positive
+    aspect: design
+  - text: "delivery late ah vandhuchu"
+    label: negative
+    aspect: delivery
+  - text: "photo quality nalladhu"
+    label: positive
+    aspect: camera
+  - text: "speaker seriyilla"
+    label: negative
+    aspect: sound
+  - text: "romba veena pona phone"
+    label: negative
+    aspect: null
+  - text: "screen super ah irukku"
+    label: positive
+    aspect: null
+  - text: "customer care seri illa"
+    label: negative
+    aspect: support
+  - text: "build quality mass"
+    label: positive
+    aspect: quality
+  - text: "phone heat aagudhu"
+    label: negative
+    aspect: null
+  - text: "clarity romba super"
+    label: positive
+    aspect: camera
+  - text: "box damaged ah vandhuchu"
+    label: negative
+    aspect: packaging
+  - text: "headphone sema sound"
+    label: positive
+    aspect: sound
+  - text: "romba thappu product"
+    label: negative
+    aspect: null
+  - text: "price nalla value"
+    label: positive
+    aspect: price

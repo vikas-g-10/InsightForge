@@ -1,0 +1,192 @@
+# PROPOSED DEFAULT LEXICON (the PRD's Hindi/Hinglish term list was not available).
+# Weights are integers from -3 to 3 (0 = neutral). Terms are lowercase.
+#   - A trailing * allows any suffix (love* -> loved, lovely). Min 4 chars before *.
+#   - Multi-word phrases are matched as token sequences, longest first.
+#   - Quote words YAML reads as booleans (no, on, yes).
+# negators_before: negation words that flip a term when they appear up to 3
+#   tokens BEFORE it (English: "not good"). Words ending in n't also count.
+# negators_after: negation words up to 2 tokens AFTER it (Hindi: "accha nahi").
+# A negated term flips sign and is halved (-0.5 x weight): "not good" is
+# mildly negative, "not bad" is mildly positive.
+negators_before: ["not", "no", never, cannot, without, neither, nor, hardly, barely]
+negators_after: [nahi, nahin, nhi, नहीं, नही, illa, ledu, alla, illai, baledu]
+lexicon:
+  english:
+    excellent: 3
+    amazing: 3
+    awesome: 3
+    perfect: 3
+    fantastic: 3
+    wonderful: 3
+    great: 2
+    best: 2
+    love*: 2
+    enjoy*: 2
+    brilliant: 2
+    superb: 2
+    super: 2
+    value: 1
+    impressive: 2
+    reliable: 2
+    good: 1
+    nice: 1
+    happy: 1
+    helpful: 1
+    easy: 1
+    smooth: 1
+    fast: 1
+    quick: 1
+    works: 1
+    working: 1
+    useful: 1
+    decent: 1
+    satisfied: 1
+    recommend*: 1
+    thanks: 1
+    ok: 0
+    okay: 0
+    average: 0
+    mediocre: -1
+    slow*: -1
+    expensive: -1
+    pricey: -1
+    laggy: -1
+    lagging: -1
+    annoying: -2
+    confusing: -1
+    issue*: -1
+    problem*: -1
+    error*: -1
+    glitch*: -1
+    bugs: -1
+    bug: -1
+    buggy: -2
+    bad: -2
+    poor: -2
+    broken: -2
+    useless: -2
+    waste: -2
+    overpriced: -2
+    disappoint*: -2
+    frustrat*: -2
+    crash*: -2
+    freez*: -2
+    fail*: -2
+    unhelpful: -2
+    rude: -2
+    defective: -2
+    "not working": -2
+    "doesn't work": -2
+    "does not work": -2
+    "stopped working": -2
+    "waste of money": -3
+    worst: -3
+    terrible: -3
+    horrible: -3
+    awful: -3
+    scam: -3
+    fraud*: -3
+    pathetic: -3
+    broke: -2
+    damaged: -2
+    late: -1
+    wow: 2
+  hinglish:
+    badhiya: 2
+    badiya: 2
+    zabardast: 2
+    jabardast: 2
+    shandar: 2
+    behtareen: 2
+    kamaal: 2
+    mast: 2
+    "paisa vasool": 2
+    accha: 1
+    acha: 1
+    achha: 1
+    achchha: 1
+    sahi: 1
+    pasand: 1
+    waah: 2
+    wah: 2
+    mehnga: -1
+    mahanga: -1
+    pareshan: -1
+    pareshani: -1
+    galat: -1
+    kharab: -2
+    bekar: -2
+    bakwas: -2
+    ghatiya: -2
+    faltu: -2
+    dhokha: -3
+    nakli: -2
+    "toot gaya": -2
+    "toot gayi": -2
+    "kharab ho gaya": -2
+    "kharab ho gayi": -2
+    "band ho gaya": -2
+  hindi_devanagari:
+    शानदार: 2
+    बढ़िया: 2
+    ज़बरदस्त: 2
+    अच्छा: 1
+    अच्छी: 1
+    पसंद: 1
+    महंगा: -1
+    परेशानी: -1
+    खराब: -2
+    बेकार: -2
+    बकवास: -2
+    घटिया: -2
+    धोखा: -3
+  kanglish:
+    chennagide: 2
+    chennagi: 2
+    olleyadu: 2
+    sakath: 2
+    chanda: 2
+    sariyilla: -2
+    chette: -2
+    ketta: -2
+    danda: -2
+  tanglish:
+    nalla: 2
+    nalladhu: 2
+    arputham: 2
+    sema: 2
+    pidichirukku: 2
+    mass: 2
+    seri: 1
+    mokka: -2
+    kevalam: -2
+    seriyilla: -2
+    veena: -2
+    mosam: -2
+    adhigam: -1
+    thappu: -2
+  tenglish:
+    bagundi: 2
+    baga: 2
+    manchi: 2
+    adbhutam: 2
+    nachindi: 2
+    thopu: 2
+    keka: 2
+    baledu: -2
+    daridram: -2
+    chetta: -2
+    nachaledu: -2
+    ekkuva: -1
+    mosam: -2
+  emoji:
+    "😍": 2
+    "❤": 2
+    "👍": 1
+    "😊": 1
+    "😡": -2
+    "😠": -2
+    "👎": -2
+    "😞": -1
+    "😢": -1
+    "🤬": -3

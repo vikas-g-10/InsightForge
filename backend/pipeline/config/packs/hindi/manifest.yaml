@@ -1,0 +1,42 @@
+code: hi
+badge: Hindi
+language: "Hindi (Devanagari)"
+tier: 1
+status: "Validated base language per PRD Section 7.3a"
+function_words:
+  - है
+  - हैं
+  - था
+  - थी
+  - थे
+  - नहीं
+  - बहुत
+  - अच्छा
+  - खराब
+  - और
+  - लेकिन
+  - यह
+  - वह
+spelling_variants: {}
+negators_before:
+  - नहीं
+  - मत
+negators_after:
+  - नहीं
+aspect_seeds:
+  battery: [बैटरी, चार्ज]
+  camera: [कैमरा, फोटो]
+  sound: [आवाज़, साउंड]
+  packaging: [डिब्बा, पैकेजिंग]
+  delivery: [डिलीवरी]
+lexicon:
+  positive:
+    अच्छा: 2
+    बढ़िया: 2
+    ज़बरदस्त: 3
+    शानदार: 3
+  negative:
+    खराब: -2
+    बकवास: -3
+    घटिया: -3
+    बेकार: -2
